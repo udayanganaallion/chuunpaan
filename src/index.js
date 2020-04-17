@@ -22,20 +22,6 @@ class App extends Component {
     return (
       <div>
         <Navigation />
-        <div className="container">
-          <Switch>
-
-            <Route path="/items">
-              <BakeryItems />
-            </Route>
-            <Route path="/myorders">
-              <MyOrders />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-          </Switch>
-        </div>
         <Footer />
       </div>
     );
