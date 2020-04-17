@@ -4,7 +4,8 @@ import Items from "../data/Snacks";
 import "../css/style.css"
 import { Button, Modal, Table } from "react-bootstrap";
 
-export default class MyOrders extends Component {
+export default class TodayOrders extends Component {
 
+  
 
 }
