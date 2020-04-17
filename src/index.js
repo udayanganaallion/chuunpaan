@@ -3,8 +3,9 @@ import { render } from "react-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
-import BakeryItems from "./components/BakeryItems";
+import TodayOrders from "./components/TodayOrders";
 import MyOrders from "./components/MyOrders";
+import OderModal from "./components/OderModal";
 import Login from "./components/Login";
 // import "../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -22,26 +23,24 @@ class App extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <h4>Allion Chuun Paan</h4>
-    
-        <ul className="navbar-nav mr-auto">
-          <Link to="/">
-            <li classNames="nav-item active">Home</li>
-          </Link>
-          <Link to="/myorders">
-            <li classNames="nav-item active">My Orders</li>
-          </Link>
-          <Link className="navStyle" to="/todayorders">
-            <li classNames="nav-item">Today Orders</li>
-          </Link>
-          <Link className="navStyle" to="/login">
-            <li classNames="nav-item">
-              <button>Login</button>
-            </li>
-          </Link>
-        </ul>
-      </nav>
+        <Navigation />
+        <div className="container">
+          <Switch>
+            <Route  exact path="/">
+                <OderModal />
+            </Route>
+            <Route path="/myorders">
+                <MyOrders />
+            </Route>
+            <Route path="/todayorders">
+                <TodayOrders />
+            </Route>
+            <Route path="/login">
+                <Login />
+            </Route>
+          </Switch>
+		    </div>
+        {/* <Footer /> */}
       </div>
     );
   }
