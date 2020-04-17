@@ -23,17 +23,13 @@ render() {
      
       <div className="container">
         <div className="row">
-          <div className="col-md-12">
             {snackItems.map(item=>
-                <div className="col-md-6">
                   <SnackItem id = {item.id}
                   name = {item.name}
                   image = {item.image}
                   price = {item.price} />
-                </div>
                 
             )}  
-          </div>
         </div>
       </div>
     )
