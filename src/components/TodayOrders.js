@@ -26,7 +26,7 @@ export default class TodayOrders extends Component {
     return this.state.items.map((item) => {
       return (
         <tr>
-              <td>{user.name}</td>
+              <td></td>
               <td>{item.name}</td>
               <td>{item.qty}</td>
               <td>{item.price}</td>
