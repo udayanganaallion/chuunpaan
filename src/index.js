@@ -22,20 +22,21 @@ class App extends Component {
   render() {
     return (
       <div>
-        <nav>
-        <h3>React Crash App</h3>
-        <ul>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <h4>Allion Chuun Paan</h4>
+    
+        <ul className="navbar-nav mr-auto">
           <Link to="/">
-            <li>Home</li>
+            <li classNames="nav-item active">Home</li>
           </Link>
           <Link to="/myorders">
-            <li>My Orders</li>
+            <li classNames="nav-item active">My Orders</li>
           </Link>
           <Link className="navStyle" to="/todayorders">
-            <li>Today Orders</li>
+            <li classNames="nav-item">Today Orders</li>
           </Link>
           <Link className="navStyle" to="/login">
-            <li>
+            <li classNames="nav-item">
               <button>Login</button>
             </li>
           </Link>
