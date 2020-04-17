@@ -16,8 +16,11 @@ class App extends Component {
     super();
     this.state = {
       name: localStorage.getItem('name')
-
     };
+  }
+
+  userLogin = username => {
+    localStorage.setItem('name', username)
   }
 
   render() {
@@ -36,7 +39,7 @@ class App extends Component {
                 <TodayOrders />
             </Route>
             <Route path="/login">
-                <Login />
+                <Login userLogin={this.userLogin}/>
             </Route>
           </Switch>
 		    </div>
