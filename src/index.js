@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import TodayOrders from "./components/TodayOrders";
 import MyOrders from "./components/MyOrders";
-import OderModal from "./components/OderModal";
+import BakeryItems from "./components/BakeryItems";
 import Login from "./components/Login";
 // import "../style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -27,7 +27,7 @@ class App extends Component {
         <div className="container">
           <Switch>
             <Route  exact path="/">
-                <OderModal />
+                <BakeryItems />
             </Route>
             <Route path="/myorders">
                 <MyOrders />
